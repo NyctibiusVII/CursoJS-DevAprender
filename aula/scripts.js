@@ -39,7 +39,7 @@ const screenSizeUser = 7.7
 const batteryUser = 5500
 
 const phoneUser = new Phone(brandUser, screenSizeUser, batteryUser)
-console.log(phoneUser)
+//console.log(phoneUser)
 
 
 //________________________________________________________________
@@ -51,4 +51,20 @@ const mouse = {
 }
 mouse.DPI = 3000   // adiciona item
 delete mouse.color // deleta item
-console.log(mouse) // show = brand e DPI
+//console.log(mouse) // show = brand e DPI
+
+
+//________________________________________________________________
+
+// Clone de obj
+const cloneMouse = Object.assign({}, mouse)
+//console.log(cloneMouse)
+
+const cloneMouse2 = Object.assign({
+    button_3 : true
+}, mouse)
+//console.log(cloneMouse2)
+
+//spread ou 3 pontos
+const cloneMouse3 = {...mouse}
+//console.log(cloneMouse3)
