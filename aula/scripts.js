@@ -1,5 +1,4 @@
 // Factory Function
-
 function createCell(brand, screenSize, battery) {
     return {
         brand,
@@ -11,22 +10,45 @@ function createCell(brand, screenSize, battery) {
     }
 } 
 
-////////// ou ////////////// #fazem_a_mesma_coisa
+////////// ou ////////////// #fazem_a_mesma_coisa_______________
 
 // Constructor Function
-
-function Phone(brand, screenSize, battery) {
-    this.brand = brand,
-    this.screenSize = screenSize,
-    this.battery = battery,
-    this.call = function(){
-        console.log("Ligando...")
+class Phone {
+    constructor(brand, screenSize, battery) {
+        this.brand = brand,
+            this.screenSize = screenSize,
+            this.battery = battery,
+            this.call = function () {
+                console.log("Ligando...")
+            }
     }
 }
 
+/**function Phone(brand, screenSize, battery) {
+*    this.brand = brand,
+*    this.screenSize = screenSize,
+*    this.battery = battery,
+*    this.call = function(){
+*        console.log("Ligando...")
+*    }
+*}
+**/
+ 
 const brandUser = 'Motorola'
 const screenSizeUser = 7.7
 const batteryUser = 5500
 
 const phoneUser = new Phone(brandUser, screenSizeUser, batteryUser)
 console.log(phoneUser)
+
+
+//________________________________________________________________
+
+// Dinâmica de obj
+const mouse = {
+    color: 'red',
+    brand: 'T-Dagger'
+}
+mouse.DPI = 3000   // adiciona item
+delete mouse.color // deleta item
+console.log(mouse) // show = brand e DPI
