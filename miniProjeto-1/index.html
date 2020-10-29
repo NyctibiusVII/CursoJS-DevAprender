@@ -4,19 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 | Segurança virtual</title>
+
+    <link rel="icon" href="./images/web-security.png">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Festa VIP</h1>
-    <h2>Bem Vindo a festa!</h2>
+<body> 
+    <div id="page-landing">
+        <div id="container">
+            <header>
+                <h1 id="title-H1" class="animate-up">Festa VIP</h1>
+                <p id="subTitle-P" class="animate-up">Bem Vindo a festa!</p>
+            </header>
 
-    <input type="text" id="nome" placeholder="Digite seu nome">
-    <h2>Quem te convidou?</h2>
-    <input type="text" id="convidadoPor" placeholder="Digite o nome de quem te convidou">
-    <button onclick="verificarEntrada()">Verificar</button>
+            <main>
+                <p id="desc-P" class="animate-up">Para sabemos se você está na lista de convidados preencha o formulário baixo e envie.  <span>O resultado aparecera em instantes após o envio!</span></p>
+                
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div class="input-block">
+                        <label for="id">Id</label>
+                        <input id="id" name="id" type="number" required />
+                    </div>
 
-    <h1>Permissão para a entrada</h1>
-    <label id="permissaoEntrada">Pesquisando...</label>
+                    <div class="input-block">
+                        <label for="name">Nome</label>
+                        <input id="name" name="name" type="text" required />
+                    </div>
+    
+                    <div class="input-block">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required />
+                    </div>
+                    
+                    <footer>
+                        <button class="animate-up appear" onclick="checkIn()">
+                            <img src="./images/icon-check.svg" alt="Verificar">
+                        </button>
+                    </footer>
+                </fieldset>
 
+                <fieldset>
+                    <legend>Quem te convidou?</legend>
+                    <div class="input-block">
+                        <label for="InvitedBy">Convidado por</label>
+                        <input id="InvitedBy" name="InvitedBy" type="text" required />
+                    </div>
+                </fieldset>
+                <hr>
+                <fieldset>
+                    <legend>Permissão para a entrada</legend>
+                    <div class="input-block">
+                        <label id="status" class="animate-up">STATUS</label>
+                        <label id="entryPermission">...</label>
+                    </div>
+                </fieldset>
+            </main>
+        </div>
+    </div>
+
+    <div class="divBottom">
+        <footer>
+            <p id="iconsFlaticon">Icons made by <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </footer>
+    </div>
+    
     <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
