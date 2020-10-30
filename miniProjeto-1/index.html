@@ -24,42 +24,46 @@
             <main>
                 <p id="desc-P" class="animate-up">Para sabemos se você está na lista de convidados preencha o formulário baixo e envie.  <span>O resultado aparecera em instantes após o envio!</span></p>
                 
-                <fieldset>
-                    <legend>Dados</legend>
-                    <div class="input-block">
-                        <label for="id">Id</label>
-                        <input id="id" name="id" type="number" required />
-                    </div>
-
-                    <div class="input-block">
-                        <label for="name">Nome</label>
-                        <input id="name" name="name" type="text" required />
-                    </div>
+                <form id="theForm" class="animate-up" action="/miniProjeto-1/enjoy-the-party.html" method="post" onsubmit="checkIn(event)">
+                    <fieldset>
+                        <legend>Dados</legend>
+                        <div class="input-block">
+                            <label class="id">Id<label class="requiredHash">*</label><span id="spanId" hidden>Preencha o campo 'Id'</span></label>
+                            <input id="id" name="id" type="number" required />
+                        </div>
     
-                    <div class="input-block">
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required />
-                    </div>
-                    
-                    <footer>
-                        <button class="animate-up appear" onclick="checkIn()">
-                            <img src="./images/icon-check.svg" alt="Verificar">
-                        </button>
-                    </footer>
-                </fieldset>
+                        <div class="input-block">
+                            <label class="name">Nome<label class="requiredHash">*</label><span id="spanName" hidden>Preencha o campo 'Nome'</span></label>
+                            <input id="name" name="name" type="text" required />
+                        </div>
+        
+                        <div class="input-block">
+                            <label class="email">Email<label class="requiredHash">*</label><span id="spanEmail" hidden>Preencha o campo 'Email'</span></label>
+                            <input id="email" name="email" type="email" required />
+                        </div>
+                        
+                        <footer>
+                            <button class="animate-up appear" onclick="checkIn(event)">
+                                <img src="./images/icon-check.svg" type="submit" alt="Verificar">
+                            </button>
+                        </footer>
+                    </fieldset>
+                </form>
+                
 
-                <fieldset>
+                <fieldset class="animate-up">
                     <legend>Quem te convidou?</legend>
                     <div class="input-block">
-                        <label for="InvitedBy">Convidado por</label>
-                        <input id="InvitedBy" name="InvitedBy" type="text" required />
+                        <label class="invitedBy">Convidado por</label>
+                        <input id="invitedBy" name="invitedBy" type="text" required />
+                        <span>não obrigatório</span>
                     </div>
                 </fieldset>
                 <hr>
-                <fieldset>
+                <fieldset class="animate-up">
                     <legend>Permissão para a entrada</legend>
                     <div class="input-block">
-                        <label id="status" class="animate-up">STATUS</label>
+                        <label id="status" class="animate-up">STATUS: </label>
                         <label id="entryPermission">...</label>
                     </div>
                 </fieldset>
@@ -69,7 +73,7 @@
 
     <div class="divBottom">
         <footer>
-            <p id="iconsFlaticon">Icons made by <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+            <p class="iconsFlaticon">Icons made by <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
         </footer>
     </div>
     
