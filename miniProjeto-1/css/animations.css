@@ -1,0 +1,42 @@
+/* animação | subir */
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+        -webkit-transform: translateY(16px);
+        -moz-transform: translateY(16px);
+        -ms-transform: translateY(16px);
+        -o-transform: translateY(16px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+.animate-up {
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+}
+
+
+
+/* animação | aparecer */
+@keyframes appear {
+    from { 
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+.animate-appear {
+    animation-name: appear;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards; /* animação para no 'to', ou seja, não da reset para o 'from'*/
+}

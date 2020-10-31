@@ -3,9 +3,9 @@
 *  - Cria função verificar entrada (checkIn)
 **/
 
-const can = 'Pode entrar!'
-const canNot = 'Você não pode entrar.'
-const unfilledForm = 'Termine de preencher o formulário.'
+const can = '- Acesso Liberado!' // - Pode entrar!
+const canNot = '- Acesso Negado!' // - Você não pode entrar
+const unfilledForm = '- Termine de preencher o formulário'
 
 const spanId = document.getElementById('spanId')
 const spanName = document.getElementById('spanName')
@@ -22,19 +22,22 @@ function checkIn(event){
     spanHidden(newGuestId, newGuestName, newGuestEmail)
     if (newGuestId === '' || newGuestName === '' || newGuestEmail === '') {
         event.preventDefault()
+        document.getElementById(statusPermission).style.background = "#fffc65" // - Amarelo
         return document.getElementById(statusPermission).innerHTML = unfilledForm
     }
     
     isEqual = checkFields(newGuestId, newGuestName, newGuestEmail)
 
     if (isEqual) {
-        event.preventDefault()// - Tirar para enviar o formulário (usado para Testes)
+        //event.preventDefault()// - Tirar para enviar o formulário (usado para Testes)
+        document.getElementById(statusPermission).style.background = "#69f5a3" // - Verde
         document.getElementById(statusPermission).innerHTML = can
         //document.getElementById('theForm').submit() // - 2° opção...
         //console.log(`true: ${isEqual}`)
     } else if (!isEqual){
         event.preventDefault()
-        document.getElementById(statusPermission).innerHTML = canNot
+        document.getElementById(statusPermission).style.background = "#ff4842d3" // - Vermelho
+        return document.getElementById(statusPermission).innerHTML = canNot
         //console.log(`false: ${isEqual}`)
     }
 }

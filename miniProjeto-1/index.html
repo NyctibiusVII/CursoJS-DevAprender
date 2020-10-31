@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 | Segurança virtual</title>
 
-    <link rel="icon" href="./images/web-security.png">
+    <link rel="icon" href="./images/lock.svg">
     
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/indexCSS/main.css">
+    <link rel="stylesheet" href="./css/indexCSS/page-landing.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -17,63 +19,55 @@
     <div id="page-landing">
         <div id="container">
             <header>
-                <h1 id="title-H1" class="animate-up">Festa VIP</h1>
-                <p id="subTitle-P" class="animate-up">Bem Vindo a festa!</p>
+                <h1 class="animate-up">Festa VIP</h1>
+                <section class="visit">
+                    <p class="animate-up">Para sabemos se você está na lista de convidados preencha o formulário baixo e envie.  <span>O resultado aparecera em instantes após o envio!</span></p>
+                </section>
             </header>
 
             <main>
-                <p id="desc-P" class="animate-up">Para sabemos se você está na lista de convidados preencha o formulário baixo e envie.  <span>O resultado aparecera em instantes após o envio!</span></p>
-                
                 <form id="theForm" class="animate-up" action="/miniProjeto-1/enjoy-the-party.html" method="post" onsubmit="checkIn(event)">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="input-block">
-                            <label class="id">Id<label class="requiredHash">*</label><span id="spanId" hidden>Preencha o campo 'Id'</span></label>
+                            <label class="id">Id<span id="spanId" class="spanObg" hidden><wbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Preencha o campo 'Id'</span></label>
                             <input id="id" name="id" type="number" required />
                         </div>
     
                         <div class="input-block">
-                            <label class="name">Nome<label class="requiredHash">*</label><span id="spanName" hidden>Preencha o campo 'Nome'</span></label>
+                            <label class="name">Nome<span id="spanName" class="spanObg" hidden><wbr>&nbsp;*Preencha o campo 'Nome'</span></label>
                             <input id="name" name="name" type="text" required />
                         </div>
-        
+
                         <div class="input-block">
-                            <label class="email">Email<label class="requiredHash">*</label><span id="spanEmail" hidden>Preencha o campo 'Email'</span></label>
+                            <label class="email">Email<span id="spanEmail" class="spanObg" hidden><wbr>&nbsp;&nbsp;*Preencha o campo 'Email'</span></label>
                             <input id="email" name="email" type="email" required />
                         </div>
                         
                         <footer>
-                            <button class="animate-up appear" onclick="checkIn(event)">
-                                <img src="./images/icon-check.svg" type="submit" alt="Verificar">
+                            <button id="submitButton" class="animate-up appear" title="Verificar os dados" onclick="checkIn(event)">
+                                <img src="./images/arrow.svg" alt="Ir para o mapa">
                             </button>
                         </footer>
                     </fieldset>
-                </form>
-                
 
-                <fieldset class="animate-up">
-                    <legend>Quem te convidou?</legend>
-                    <div class="input-block">
-                        <label class="invitedBy">Convidado por</label>
-                        <input id="invitedBy" name="invitedBy" type="text" required />
-                        <span>não obrigatório</span>
-                    </div>
-                </fieldset>
-                <hr>
-                <fieldset class="animate-up">
-                    <legend>Permissão para a entrada</legend>
-                    <div class="input-block">
-                        <label id="status" class="animate-up">STATUS: </label>
-                        <label id="entryPermission">...</label>
-                    </div>
-                </fieldset>
+                    <div id="entryPermission" class="separate"></div>
+
+                    <fieldset class="animate-up">
+                        <legend>Quem te convidou?</legend>
+                        <div class="input-block">
+                            <label class="invitedBy">Convidado por:<span class="notObg"><wbr>-não obrigatório-</span></label>
+                            <input id="invitedBy" name="invitedBy" type="text" />
+                        </div>
+                    </fieldset>
+                </form> 
             </main>
         </div>
     </div>
 
     <div class="divBottom">
         <footer>
-            <p class="iconsFlaticon">Icons made by <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+            <small><span class="footer__copyright">© Copyright 2020 Matheus Vidigal - (NyctibiusVII). All rights reserved</span></small>
         </footer>
     </div>
     

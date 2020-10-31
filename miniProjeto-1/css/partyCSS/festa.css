@@ -1,0 +1,24 @@
+/* padrão-universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+}
+body {
+    height: 100vh;
+
+    color: white;
+    /*background: linear-gradient(329.54deg, #ff15b9 0%, #ffee56 100%) no-repeat;*/
+    font: 800 1.8rem/1 'Nunito', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*font-family: 'Lato', sans-serif;
+    */
+   background-color: #070707;
+}

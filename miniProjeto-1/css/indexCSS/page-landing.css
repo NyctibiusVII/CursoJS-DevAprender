@@ -1,0 +1,75 @@
+#page-landing {
+    background: linear-gradient(329.54deg, #ff15b9 0%, #ffee56 100%) no-repeat;
+    /*fundo: degrade linear((61°)degraus de rotação, cor inicial do 0% para cor secundaria 100%) não repita na pagina*/
+
+    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+}
+#container {
+    margin: auto;
+
+    width: min(90%, 112rem);
+}
+h1, .visit p {
+    height: 10vh;
+}
+
+
+
+/* animações */
+header h1 {
+    margin-top: 2.8rem;
+    animation-delay: 150ms;
+    font-size: clamp(4rem, 8vw, 8.4rem);
+    /*         clamp(min, ideal, max) */
+}
+.visit p {
+    animation-delay: 200ms;
+}
+form {
+    animation-delay: 250ms;
+}
+#submitButton {
+    animation-delay: 300ms;
+}
+#submitButton:hover {
+    background: #ff6699;
+}
+
+
+
+.divBottom {
+    background: #ffffff;
+    color: #ff6699;
+
+    display: flex;         /*alinha itens dentro de"a"*/
+    align-items: center;    /*alinha eixoY*/
+    justify-content: center;/*alinha eixoX*/
+  }
+
+
+
+  /* Desktop version */
+@media (min-width: 760px) {
+    /* 760px para cima faz o que esta aqui dentro */
+    #page-landing {
+        text-align: initial
+    }
+    #container {
+        padding: 5rem 2rem;
+    }
+    h1, .visit p {
+        height: 13vh;
+        /* height: initial; Da reset para antes de aplicar as regras css */
+        text-align: initial;
+    }
+    form {
+        width: 70rem;
+        margin-top: 1.4rem;
+    }
+    #submitButton {
+        width: 30%;
+    }
+}
