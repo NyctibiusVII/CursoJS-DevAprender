@@ -4,19 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 | Segurança virtual</title>
+
+    <link rel="icon" href="./images/lock.svg">
+    
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/indexCSS/main.css">
+    <link rel="stylesheet" href="./css/indexCSS/page-landing.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>  
-    <h1>Festa VIP</h1>
-    <h2>Bem Vindo a festa!</h2>
+<body> 
+    <div id="page-landing">
+        <div id="container">
+            <header>
+                <h1 class="animate-up">Festa VIP</h1>
+                <section class="visit">
+                    <p class="animate-up">Para sabemos se você está na lista de convidados preencha o formulário baixo e envie.  <span>O resultado aparecera em instantes após o envio!</span></p>
+                </section>
+            </header>
 
-    <input type="text" id="nome" placeholder="Digite seu nome">
-    <h2>Quem te convidou?</h2>
-    <input type="text" id="convidadoPor" placeholder="Digite o nome de quem te convidou">
-    <button onclick="verificarEntrada()">Verificar</button>
+            <main>
+                <form id="theForm" class="animate-up" action="/miniProjeto-1/enjoy-the-party.html" method="post" onsubmit="checkIn(event)">
+                    <fieldset>
+                        <legend>Dados</legend>
+                        <div class="input-block">
+                            <label class="id">Id<span id="spanId" class="spanObg" hidden><wbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Preencha o campo 'Id'</span></label>
+                            <input id="id" name="id" type="number" required />
+                        </div>
+    
+                        <div class="input-block">
+                            <label class="name">Nome<span id="spanName" class="spanObg" hidden><wbr>&nbsp;*Preencha o campo 'Nome'</span></label>
+                            <input id="name" name="name" type="text" required />
+                        </div>
 
-    <h1>Permissão para a entrada</h1>
-    <label id="permissaoEntrada">Pesquisando...</label>
+                        <div class="input-block">
+                            <label class="email">Email<span id="spanEmail" class="spanObg" hidden><wbr>&nbsp;&nbsp;*Preencha o campo 'Email'</span></label>
+                            <input id="email" name="email" type="email" required />
+                        </div>
+                        
+                        <footer>
+                            <button id="submitButton" class="animate-up appear" title="Verificar os dados" onclick="checkIn(event)">
+                                <img src="./images/arrow.svg" alt="Ir para o mapa">
+                            </button>
+                        </footer>
+                    </fieldset>
 
+                    <div id="entryPermission" class="separate"></div>
+
+                    <fieldset class="animate-up">
+                        <legend>Quem te convidou?</legend>
+                        <div class="input-block">
+                            <label class="invitedBy">Convidado por:<span class="notObg"><wbr>-não obrigatório-</span></label>
+                            <input id="invitedBy" name="invitedBy" type="text" />
+                        </div>
+                    </fieldset>
+                </form> 
+            </main>
+        </div>
+    </div>
+
+    <div class="divBottom">
+        <footer>
+            <small><span class="footer__copyright">© Copyright 2020 Matheus Vidigal - (NyctibiusVII). All rights reserved</span></small>
+        </footer>
+    </div>
+    
     <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>

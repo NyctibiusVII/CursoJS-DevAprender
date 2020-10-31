@@ -1,0 +1,98 @@
+form{
+  margin: 6.4rem auto;
+  background: #ffffff;
+  border: 1px solid #ffe9dccc;
+  overflow: hidden;
+  padding: 8rem;
+  
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+  
+
+
+fieldset {
+  border: 0;
+}
+fieldset + fieldset { /* pega o 2°segundo fieldset (irmão*) */
+  margin-top: 8rem;
+}
+fieldset legend {
+  width: 100%;
+
+  font-size: 3.2rem;
+  line-height: 1.5;
+
+  color: #ff9d65;
+  font-weight: 700;
+
+  border-bottom: 1px solid #ffe9dccc;
+  margin-bottom: 4rem;
+  padding-bottom: 2.4rem;
+}
+
+
+
+.input-block + .input-block {
+  margin-top: 2.4rem;
+}
+.input-block label {
+  color: #e68c58bb;
+  margin-bottom: .8rem;
+  line-height: 1.5;
+}
+.input-block label .spanObg {
+  font-size: 1.4rem;
+  color: #ff0000bb;
+  margin-left: 2.4rem;
+}
+.input-block input {
+  width: 100%;
+  background: #ffede25d;
+  color: #cf7f50bb;
+  border: 1px solid #ffe9dccc;
+
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.input-block input {
+  height: 6.4rem;
+  padding: 0 1.6rem;
+}
+.input-block input:valid { /*#A1E9C5 = verde*/
+  border: 5px solid #ffd79a1e;
+}
+
+
+
+.separate {
+  width: 100%;
+  /*height: 2.8rem;*/
+
+  background: #ffede275; /*#ffede25d*/
+  margin: 8rem 0 8rem 0;
+
+  display: block;         /*alinha itens dentro de"a"*/
+  align-items: center;    /*alinha eixoY*/
+  justify-content: center;/*alinha eixoX*/
+
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+fieldset footer {
+  margin-top: 3.8rem;
+}
+fieldset .input-block label .notObg {
+  font-size: 1.4rem;
+  color: #ffc5a193;
+  margin-left: 2.4rem;
+}
